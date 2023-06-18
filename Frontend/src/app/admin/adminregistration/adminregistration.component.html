@@ -1,0 +1,48 @@
+<app-header />
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">Admin Registration</h3>
+        </div>
+        <div class="card-body">
+          <form
+            #adminregisterForm="ngForm"
+            (ngSubmit)="onAdminCreate(adminregisterForm.value)"
+          >
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                name="username"
+                ngModel
+                class="form-control"
+                id="username"
+                placeholder="Enter username"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                name="password"
+                ngModel
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Enter password"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Register
+            </button>
+            <div class="mt-3 text-center">
+              <span>Already have an account? </span>
+              <a routerLink="/adminlogin" class="link-primary">Login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

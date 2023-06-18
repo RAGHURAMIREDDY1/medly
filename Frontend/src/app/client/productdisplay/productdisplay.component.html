@@ -1,0 +1,19 @@
+<app-header />
+<div class="product-container">
+  <div class="product-image">
+    <img src="{{ product.image }}" alt="Product image" />
+  </div>
+  <div class="product-info">
+    <h2>{{ product.productname }}</h2>
+    <p>{{ product.description }}</p>
+    <p class="price">{{ product.price | currency : "INR" }}</p>
+    <div class="button-container">
+      <button class="btn btn-primary" (click)="addToCart(product._id, 1)">
+        Add to cart
+      </button>
+      <button class="btn btn-primary" (click)="addToCart(product._id, 1)">
+        Buy now
+      </button>
+    </div>
+  </div>
+</div>

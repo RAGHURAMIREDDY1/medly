@@ -1,0 +1,72 @@
+/* Main content */
+
+.main {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.main h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Sidebar */
+
+  .sidenav {
+    width: 70px;
+    padding-top: 10px;
+  }
+
+  .sidenav h3 {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .sidenav ul {
+    margin: 10px 0 0;
+  }
+
+  .sidenav li {
+    padding: 5px;
+  }
+
+  .sidenav li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sidenav a {
+    font-size: 0.8rem;
+  }
+
+  /* Main content */
+
+  .main {
+    margin-left: 70px;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+}

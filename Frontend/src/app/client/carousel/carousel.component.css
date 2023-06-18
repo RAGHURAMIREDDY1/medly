@@ -1,0 +1,14 @@
+.carousel-image {
+  max-height: 100px; /* Adjust this value as needed */
+  width: 10%;
+}
+
+video.carousel-item {
+  width: 100px;
+  height: 400px;
+}
+@media screen and (max-width: 729px) {
+  carousel-inner {
+    height: 50%;
+  }
+}

@@ -1,0 +1,60 @@
+.registration-container {
+  max-width: 500px;
+  margin: 0 auto; /* Added this line */
+  text-align: center;
+}
+.container {
+  margin-left: 30%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border: 2px solid #008cba;
+}
+
+button {
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #006b87;
+}
+@media (max-width: 768px) {
+  /* CSS rules for screens less than 768 pixels wide */
+  .container {
+    margin-left: 0px;
+  }
+}

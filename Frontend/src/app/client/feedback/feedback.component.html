@@ -1,0 +1,21 @@
+<app-header />
+<div class="feedback-container">
+  <form (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="user" name="user" required />
+
+    <label for="message">Message:</label>
+    <textarea
+      id="message"
+      [(ngModel)]="message"
+      name="message"
+      required
+    ></textarea>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+  <div class="success-message" *ngIf="submitted">
+    <p>Thank you for submitting your feedback!</p>
+  </div>
+</div>

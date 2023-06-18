@@ -1,0 +1,49 @@
+<app-sidebar />
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <h2>Products</h2>
+  <a routerLink="/addproduct" class="btn btn-primary">Add Product</a>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Brand</th>
+          <th>Image</th>
+          <th>Category</th>
+          <th>Count in Stock</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prod of products; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ prod.productname }}</td>
+          <td>{{ prod.price }}</td>
+          <td>{{ prod.description }}</td>
+          <td>{{ prod.brand }}</td>
+          <td>
+            <img class="apimages" src="{{ prod.image }}" alt="Product 1" />
+          </td>
+          <td>{{ prod.category }}</td>
+          <td>{{ prod.countInStock }}</td>
+          <td>{{ prod.quantity }}</td>
+          <td>
+            <a
+              [routerLink]="['/updateproduct', prod._id]"
+              class="btn btn-primary"
+              >Update</a
+            >
+            <button class="btn btn-danger" (click)="deleteProduct(prod._id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>

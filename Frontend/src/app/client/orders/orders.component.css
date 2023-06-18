@@ -1,0 +1,8 @@
+.row {
+  margin-left: 15%;
+}
+@media (max-width: 768px) {
+  .row {
+    margin-left: 0%;
+  }
+}

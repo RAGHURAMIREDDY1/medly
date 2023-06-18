@@ -1,0 +1,37 @@
+<div class="dashboard">
+  <div class="sidebar">
+    <h3>Dashboard</h3>
+    <ul>
+      <!-- <li class="active"><a href="#">Analytics</a></li> -->
+      <li><a routerLink="/dashboard">Home</a></li>
+      <li><a routerLink="/adminorders">Orders</a></li>
+      <li><a routerLink="/adminproducts">Medication Management</a></li>
+      <li><a routerLink="/adminfeedback">Feedback</a></li>
+      <li><a routerLink="/usermanagement">User Account Management</a></li>
+      <li><a routerLink="/adminorders" (click)="logOut()">Logout</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <h2>Analytics Dashboard</h2>
+    <div class="metrics">
+      <!-- <div class="metric">
+        <div class="value" id="revenue">{{ revenue }}</div>
+        <div class="label">Total Revenue</div>
+      </div> -->
+      <div class="metric">
+        <div class="value" id="orders">{{ orders }}</div>
+        <div class="label">Orders</div>
+      </div>
+      <div class="metric">
+        <div class="value" id="users">{{ users }}</div>
+        <div class="label">Total Users</div>
+      </div>
+    </div>
+    <div class="chart">
+      <img
+        src="https://images.pexels.com/photos/9180717/pexels-photo-9180717.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="Sales Chart"
+      />
+    </div>
+  </div>
+</div>

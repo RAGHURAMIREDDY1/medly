@@ -1,0 +1,58 @@
+<app-header></app-header>
+<div class="cart w-100">
+  <h1>Shopping Cart</h1>
+  <div class="cart__table w-100">
+    <table>
+      <thead>
+        <tr>
+          <th>Product Image</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop through cart items from backend -->
+        <tr *ngFor="let item of cartItems">
+          <td>
+            <div class="cart__product">
+              <img src="{{ item.image }}" alt="{{ item.name }}" />
+              <div class="cart__product-details">
+                <div class="cart__product-name">{{ item.name }}</div>
+                <div class="cart__product-price">
+                  <!-- {{ item.price | currency : "INR" }} -->
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>{{ item.price | currency : "INR" }}</td>
+          <td class="d-flex flex-column mt-4" style="gap: 10px">
+            <a routerLink="/checkout/{{ item._id }}">
+              <button class="btn btn-outline-success">BuyNow</button>
+            </a>
+            <button class="btn btn-danger" (click)="removeFromCart(item._id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cart__summary">
+    <div class="cart__summary-row">
+      <div class="cart__summary-col">Subtotal:</div>
+      <div class="cart__summary-col">
+        {{ calculateSubtotal() | currency : "INR" }}
+      </div>
+    </div>
+    <div class="cart__summary-row">
+      <div class="cart__summary-col">Shipping:</div>
+      <div class="cart__summary-col">FREE</div>
+    </div>
+    <div class="cart__summary-row">
+      <div class="cart__summary-col">Total:</div>
+      <div class="cart__summary-col">
+        {{ calculateTotal() | currency : "INR" }}
+      </div>
+    </div>
+  </div>
+</div>

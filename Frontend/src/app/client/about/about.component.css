@@ -1,0 +1,70 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* About page styles */
+.about {
+  background-color: #f8f8f8;
+  padding: 4rem 0;
+}
+
+.about h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 767px) {
+  .about h2 {
+    font-size: 1.2rem;
+  }
+}

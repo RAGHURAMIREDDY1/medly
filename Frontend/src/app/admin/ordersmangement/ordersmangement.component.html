@@ -1,0 +1,39 @@
+<app-sidebar />
+
+<!-- Page Content -->
+<div id="content">
+  <div class="container-fluid">
+    <h1>Orders</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Phone</th>
+          <th>Payment</th>
+          <th>Status</th>
+          <th>Created At</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.firstname }}</td>
+          <td>{{ order.phone }}</td>
+          <td>{{ order.paymentMethod }}</td>
+          <td>
+            <select
+              [(ngModel)]="order.status"
+              (change)="updateOrderStatus(order)"
+            >
+              <option *ngFor="let status of orderStatusList" [value]="status">
+                {{ status }}
+              </option>
+            </select>
+          </td>
+          <td>{{ order.createdAt }}</td>
+          <td>{{ order.address }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

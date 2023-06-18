@@ -1,0 +1,40 @@
+/* Page Content */
+#content {
+  margin-left: 250px;
+  padding: 20px;
+  overflow: auto;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    position: relative;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 20px;
+  }
+
+  .sidebar-header {
+    padding: 10px;
+  }
+
+  #content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .table-responsive-sm {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-responsive-sm > .table-bordered {
+    border: 0;
+  }
+}

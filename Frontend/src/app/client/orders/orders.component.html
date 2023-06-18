@@ -1,0 +1,80 @@
+<app-clientsidebar></app-clientsidebar>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Pending Orders</h3>
+      <ng-container *ngIf="ordersPending.length > 0; else noOrdersPending">
+        <div *ngFor="let order of ordersPending" class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">{{ order.orderId }}</h5>
+            <p class="card-text">
+              <strong>Product Name:</strong> {{ order.productName }}
+            </p>
+            <p class="card-text">
+              <strong>Quantity:</strong> {{ order.quantity }}
+            </p>
+            <p class="card-text">
+              <strong>Total Price:</strong> {{ order.price }}
+            </p>
+            <p class="card-text">
+              <strong>Payment Method:</strong> {{ order.paymentMethod }}
+            </p>
+            <p class="card-text">
+              <strong>Address:</strong> {{ order.address }}
+            </p>
+            <p class="card-text">
+              <strong>Created At:</strong> {{ order.createdAt | date }}
+            </p>
+            <p class="card-text text-success">
+              <strong>Status:</strong> {{ order.status }}
+            </p>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #noOrdersPending>
+        <p>
+          You don't have any pending orders at the moment. Why not browse our
+          products and place an order?
+        </p>
+      </ng-template>
+    </div>
+    <div class="col-md-6">
+      <h3>Delivered Orders</h3>
+      <ng-container *ngIf="ordersDelivered.length > 0; else noOrdersDelivered">
+        <div *ngFor="let order of ordersDelivered" class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">{{ order.orderId }}</h5>
+            <p class="card-text">
+              <strong>Product Name:</strong> {{ order.productName }}
+            </p>
+            <p class="card-text">
+              <strong>Quantity:</strong> {{ order.quantity }}
+            </p>
+            <p class="card-text">
+              <strong>Total Price:</strong> {{ order.price }}
+            </p>
+            <p class="card-text">
+              <strong>Payment Method:</strong> {{ order.paymentMethod }}
+            </p>
+            <p class="card-text">
+              <strong>Address:</strong> {{ order.address }}
+            </p>
+            <p class="card-text">
+              <strong>Created At:</strong> {{ order.createdAt | date }}
+            </p>
+            <p class="card-text text-success">
+              <strong>Status:</strong> {{ order.status }}
+            </p>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #noOrdersDelivered>
+        <p>
+          You haven't placed any orders with us yet. Why not browse our products
+          and place an order?
+        </p>
+      </ng-template>
+    </div>
+  </div>
+</div>

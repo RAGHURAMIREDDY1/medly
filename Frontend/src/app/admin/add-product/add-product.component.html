@@ -1,0 +1,72 @@
+<app-sidebar />
+<div>
+  <h1>Add Product</h1>
+  <form (submit)="onSubmit()">
+    <div>
+      <label>Product Name:</label>
+      <input
+        type="text"
+        [(ngModel)]="product.productname"
+        name="productname"
+        required
+      />
+    </div>
+    <div>
+      <label>Description:</label>
+      <textarea
+        [(ngModel)]="product.description"
+        name="description"
+        required
+      ></textarea>
+    </div>
+    <div>
+      <label>Price:</label>
+      <input type="number" [(ngModel)]="product.price" name="price" required />
+    </div>
+    <div>
+      <label>Brand:</label>
+      <input type="text" [(ngModel)]="product.brand" name="brand" required />
+    </div>
+    <div>
+      <label>Image:</label>
+      <input type="text" [(ngModel)]="product.image" name="image" required />
+    </div>
+    <div>
+      <label>Category:</label>
+      <input
+        type="text"
+        [(ngModel)]="product.category"
+        name="category"
+        required
+      />
+    </div>
+    <div>
+      <label>Count In Stock:</label>
+      <input
+        type="number"
+        [(ngModel)]="product.countInStock"
+        name="countInStock"
+        required
+      />
+    </div>
+    <div>
+      <label>Rating:</label>
+      <input
+        type="number"
+        [(ngModel)]="product.rating"
+        name="rating"
+        required
+      />
+    </div>
+    <div>
+      <label>Quantity:</label>
+      <input
+        type="number"
+        [(ngModel)]="product.quantity"
+        name="quantity"
+        required
+      />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
