@@ -20,11 +20,17 @@ export class ProductdisplayComponent {
         this.product = product;
       });
   }
-  addToCart(productId: string, quantity: number) {
-    const cartItem = { productId, quantity };
+  addToCart(productId: string) {
+    const userId = localStorage.getItem('userId');
+    const cartItem = { productId, userId };
+
     this.http.post('http://localhost:5100/add-to-cart', cartItem).subscribe(
-      () => alert(`Added ${quantity} of product  to cart`),
-      (error) => console.error(error)
+      () => {
+        alert('Added to cart');
+      },
+      (error) => {
+        console.error(error);
+      }
     );
   }
 }
